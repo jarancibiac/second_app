@@ -2,14 +2,72 @@
 <html>
   <head>
     <title>SecondApp</title>
+    <title>No Sidebar - Helios by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="no-sidebar is-preload">
+  <div id="header">
+
+  <!-- Inner -->
+    <div class="inner">
+      <header>
+        <h1><a href="index.html" id="logo">Helios</a></h1>
+      </header>
+    </div>
+    <!-- Nav -->
+
+
+</div>
+    <!-- Nav -->
+     <nav id="nav">
+      <ul>
+      
+      <li><%= link_to 'Home',pages_index_path %></li>
+      <li>
+        <a <%= link_to 'Dropdown',pages_test_path %></a>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Magna phasellus</a></li>
+          <li><a href="#">Etiam dolore nisl</a></li>
+          <li>
+            <a href="#">And a submenu &hellip;</a>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Phasellus consequat</a></li>
+              <li><a href="#">Magna phasellus</a></li>
+              <li><a href="#">Etiam dolore nisl</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Veroeros feugiat</a></li>
+        </ul>
+      </li>
+      <li><a <%= link_to 'Left Sidebar',users_login_path %></a></li>
+      <li><%= link_to 'Right Sidebar',pages_about_us_path %></a></li>
+      <li><a href="no-sidebar.html">No Sidebar</a></li>
+      </ul>
+     </nav>
+    
+     <%= yield %>
+    <!-- Scripts -->
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
   </body>
 </html>
